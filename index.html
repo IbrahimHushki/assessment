@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div>
-      <div id="header">
-        <p>{{name}}</p>
-        <div id="menu">
-          <ul>
-            <li>CV</li>
-            <li>GitHub</li>
-            <li>Contact</li>
-          </ul>
-        </div>
+    <div id="container">
+      <div id="menu">
+        <p id="myName">{{name}}</p>
+        <ul>
+          <li>
+            <a
+              href="./Attachments/Ibrahim Hushki - Frontend Developer Resume.pdf"
+              target="_blank"
+              >CV</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/IbrahimHushki" target="”_blank”"
+              >GitHub</a
+            >
+          </li>
+          <li id="contactElement" onclick="openContactModal()">Contact</li>
+        </ul>
       </div>
       <div id="content">
-        <p>{{date}}</p>
-        <div>
+        <header><p id="currentDate"></p></header>
+        <article>
           <p>
             I had seen little of Holmes lately. My marriage had drifted us away
             from each other. My own complete happiness, and the home-centred
@@ -69,17 +77,23 @@
             before the fire and looked me over in his singular introspective
             fashion.
           </p>
-        </div>
-        <div id="footer">
-          <div>
-            <p>
-              Passage adapted from Arthur Conan Doyle's "A Scandal in Bohemia"
-              (1891)
-            </p>
-          </div>
-        </div>
+        </article>
+        <footer id="footer">
+          <p>
+            Passage adapted from Arthur Conan Doyle's "A Scandal in Bohemia"
+            (1891)
+          </p>
+        </footer>
       </div>
     </div>
     <script src="script.js"></script>
+    <div id="contactModal">
+      <div id="contactModalInformation">
+        <button id="closeButton" onclick="closeContactModal()">&#10005;</button>
+        <p>Contact Information:</p>
+        <p>Email: hushki.ibrahim@gmail.com</p>
+        <p>Phone: +962 79 976 5803</p>
+      </div>
+    </div>
   </body>
 </html>
